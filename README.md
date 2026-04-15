@@ -68,10 +68,11 @@ If the local service is down or you're working from home, use Google Gemini. It'
 2. Sign in with your Google account
 3. Click **"Get API Key"** in the left sidebar
 4. Click **"Create API key"** → select any project → copy the key
-5. In your `.env` file set:
-   ```
-   GEMINI_API_KEY=your-key-here
-   ```
+5. keep the API key somewhere safe then copy it to the to .env  on each session:
+        In your `.env` file set:
+        ```
+         GEMINI_API_KEY=your-key-here
+        ```
 
 That's it! The code automatically detects which backend is available and uses it.
 
