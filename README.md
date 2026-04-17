@@ -21,7 +21,7 @@ Create a virtual environment once at the root of the repo, then activate it befo
 
 **Create and activate:**
 ```bash
-python3 -m venv .venv
+python -m venv .venv
 
 # On Linux / macOS:
 source .venv/bin/activate
