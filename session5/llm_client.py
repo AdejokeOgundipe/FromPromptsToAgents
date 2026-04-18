@@ -267,24 +267,20 @@ def chat(messages: list[dict], max_tokens=2048, temperature=0.7, tools=None):
 
 def _inject_tool_descriptions(messages: list[dict], tools: list[dict]) -> list[dict]:
     """Inject tool definitions into the system prompt for text-based tool calling."""
-    tool_text = "You have access to the following tools:\n\n"
+    tool_text = "You can call tools:\n"
     for tool in tools:
-        tool_text += f"### {tool['name']}\n"
-        tool_text += f"{tool['description']}\n"
+        tool_text += f"- {tool['name']}"
         params = tool.get("parameters", {}).get("properties", {})
         if params:
-            tool_text += "Parameters:\n"
-            for pname, pinfo in params.items():
-                desc = pinfo.get("description", "")
-                ptype = pinfo.get("type", "string")
-                tool_text += f"  - {pname} ({ptype}): {desc}\n"
+            param_names = ", ".join(params.keys())
+            tool_text += f"({param_names})"
         tool_text += "\n"
 
     tool_text += (
-        "To call a tool, output EXACTLY this format (you may call multiple tools):\n"
+        "Use exactly this format for tool calls:\n"
         '<tool_call>\n{"name": "tool_name", "arguments": {"param": "value"}}\n</tool_call>\n\n'
-        "If you do NOT need to call a tool, just respond with your final answer as plain text.\n"
-        "When you have gathered enough information, give your final answer WITHOUT any tool_call tags.\n"
+        "If no tool is needed, return plain text only.\n"
+        "Final answer must not include tool_call tags or raw JSON.\n"
     )
 
     new_messages = []
@@ -313,6 +309,7 @@ def _parse_tool_calls(text: str) -> list[dict]:
       2. Raw JSON object / list when the model skips the tags
     """
     calls = []
+    stripped = text.strip()
 
     # Try tagged format first
     tag_pattern = r"<tool_call>\s*(\{.*?\})\s*</tool_call>"
@@ -329,8 +326,25 @@ def _parse_tool_calls(text: str) -> list[dict]:
     if calls:
         return calls
 
+    # Fallback: scan for inline JSON objects/lists in mixed text
+    for parsed, _start, _end in _extract_json_segments(stripped):
+        if isinstance(parsed, dict) and "name" in parsed and "arguments" in parsed:
+            calls.append({
+                "name": parsed.get("name", ""),
+                "arguments": parsed.get("arguments", {}),
+            })
+        elif isinstance(parsed, list):
+            for item in parsed:
+                if isinstance(item, dict) and "name" in item and "arguments" in item:
+                    calls.append({
+                        "name": item.get("name", ""),
+                        "arguments": item.get("arguments", {}),
+                    })
+
+    if calls:
+        return calls
+
     # Fallback: try to parse the whole response as a bare JSON tool call
-    stripped = text.strip()
     try:
         parsed = json.loads(stripped)
         if isinstance(parsed, dict) and "name" in parsed and "arguments" in parsed:
@@ -364,7 +378,57 @@ def _strip_tool_calls(text: str) -> str:
     except (json.JSONDecodeError, ValueError):
         pass
 
-    return cleaned
+    # Remove untagged inline JSON tool calls that may appear in mixed output
+    segments = _extract_json_segments(cleaned)
+    spans_to_remove = []
+    for parsed, start, end in segments:
+        if isinstance(parsed, dict) and "name" in parsed and "arguments" in parsed:
+            spans_to_remove.append((start, end))
+        elif isinstance(parsed, list) and parsed and all(
+            isinstance(i, dict) and "name" in i and "arguments" in i for i in parsed
+        ):
+            spans_to_remove.append((start, end))
+
+    if spans_to_remove:
+        pieces = []
+        cursor = 0
+        for start, end in sorted(spans_to_remove):
+            if start >= cursor:
+                pieces.append(cleaned[cursor:start])
+                cursor = end
+        pieces.append(cleaned[cursor:])
+        cleaned = "".join(pieces)
+
+    # Normalize whitespace left behind after removing tool payloads
+    cleaned = re.sub(r"\n{3,}", "\n\n", cleaned)
+    cleaned = re.sub(r"[ \t]{2,}", " ", cleaned)
+    return cleaned.strip()
+
+
+def _extract_json_segments(text: str):
+    """Extract JSON objects/lists from mixed text using raw_decode.
+
+    Returns a list of tuples: (parsed_json, start_index, end_index).
+    """
+    segments = []
+    decoder = json.JSONDecoder()
+    i = 0
+    n = len(text)
+
+    while i < n:
+        ch = text[i]
+        if ch not in "[{":
+            i += 1
+            continue
+
+        try:
+            parsed, end = decoder.raw_decode(text, i)
+            segments.append((parsed, i, end))
+            i = end
+        except json.JSONDecodeError:
+            i += 1
+
+    return segments
 
 
 def _chat_with_tools(

@@ -85,6 +85,10 @@ DISHES = {
             "Remove pan from heat before adding egg mixture to prevent scrambling.",
             "Serve immediately - carbonara does not reheat well.",
         ],
+        "price_gbp": 8.40,
+        "nutrition_per_serving": {"protein_g": 23, "carbs_g": 69, "calories_kcal": 720},
+        "key_vitamins": ["B12", "A", "D"],
+        "dietary_tags": ["contains_egg", "contains_dairy", "contains_meat"],
     },
     "souffle": {
         "name": "Cheese Soufflé",
@@ -175,6 +179,10 @@ DISHES = {
             "Handle hot ramekins with oven gloves.",
             "Ensure no yolk contaminates egg whites or they will not whip.",
         ],
+        "price_gbp": 7.80,
+        "nutrition_per_serving": {"protein_g": 18, "carbs_g": 16, "calories_kcal": 390},
+        "key_vitamins": ["B12", "A", "calcium"],
+        "dietary_tags": ["contains_egg", "contains_dairy", "vegetarian"],
     },
     "sushi rolls": {
         "name": "Sushi Rolls (Maki)",
@@ -258,6 +266,10 @@ DISHES = {
             "Keep hands wet with vinegar water when handling rice to prevent sticking.",
             "Clean cutting surfaces thoroughly after handling raw fish.",
         ],
+        "price_gbp": 12.00,
+        "nutrition_per_serving": {"protein_g": 19, "carbs_g": 58, "calories_kcal": 520},
+        "key_vitamins": ["B12", "D", "K"],
+        "dietary_tags": ["contains_fish"],
     },
     "pizza margherita": {
         "name": "Pizza Margherita",
@@ -340,6 +352,10 @@ DISHES = {
             "Allow fermented dough to rest if it springs back excessively.",
             "Be cautious of steam when opening oven.",
         ],
+        "price_gbp": 6.80,
+        "nutrition_per_serving": {"protein_g": 16, "carbs_g": 63, "calories_kcal": 480},
+        "key_vitamins": ["calcium", "A", "C"],
+        "dietary_tags": ["vegetarian", "contains_dairy", "gluten"],
     },
     "beef stir-fry": {
         "name": "Beef Stir-Fry",
@@ -406,6 +422,10 @@ DISHES = {
             "Ensure all ingredients are dry before adding to hot oil.",
             "Use a long-handled spatula to avoid burns.",
         ],
+        "price_gbp": 10.60,
+        "nutrition_per_serving": {"protein_g": 33, "carbs_g": 14, "calories_kcal": 430},
+        "key_vitamins": ["B12", "iron", "C"],
+        "dietary_tags": ["contains_meat", "high_protein"],
     },
     "chocolate cake": {
         "name": "Chocolate Cake",
@@ -492,6 +512,10 @@ DISHES = {
             "Use oven gloves when handling hot tins.",
             "Check oven temperature with a thermometer for accurate baking.",
         ],
+        "price_gbp": 9.20,
+        "nutrition_per_serving": {"protein_g": 5, "carbs_g": 46, "calories_kcal": 410},
+        "key_vitamins": ["B2", "A"],
+        "dietary_tags": ["vegetarian", "contains_dairy", "contains_egg", "dessert"],
     },
     "fish and chips": {
         "name": "Fish and Chips",
@@ -568,6 +592,10 @@ DISHES = {
             "Never leave hot oil unattended.",
             "Have a fire blanket or lid nearby in case of oil fire - never use water.",
         ],
+        "price_gbp": 11.40,
+        "nutrition_per_serving": {"protein_g": 35, "carbs_g": 54, "calories_kcal": 780},
+        "key_vitamins": ["B12", "D", "selenium"],
+        "dietary_tags": ["contains_fish", "fried"],
     },
     "pad thai": {
         "name": "Pad Thai",
@@ -635,6 +663,10 @@ DISHES = {
             "Drain noodles well to prevent oil splatter.",
             "Keep workspace clear due to rapid cooking pace.",
         ],
+        "price_gbp": 9.00,
+        "nutrition_per_serving": {"protein_g": 21, "carbs_g": 66, "calories_kcal": 590},
+        "key_vitamins": ["B1", "C", "folate"],
+        "dietary_tags": ["contains_fish", "contains_egg"],
     },
     "french omelette": {
         "name": "French Omelette",
@@ -700,6 +732,10 @@ DISHES = {
             "Work quickly once eggs hit the pan - the entire cook takes 60-90 seconds.",
             "Do not overcook; the centre should remain slightly baveuse (creamy).",
         ],
+        "price_gbp": 2.20,
+        "nutrition_per_serving": {"protein_g": 19, "carbs_g": 1, "calories_kcal": 280},
+        "key_vitamins": ["B12", "D", "A"],
+        "dietary_tags": ["vegetarian", "contains_egg"],
     },
     "bread": {
         "name": "Artisan Bread",
@@ -787,6 +823,180 @@ DISHES = {
             "Allow bread to cool fully before slicing to complete the internal cooking.",
             "Be cautious of steam when removing the Dutch oven lid.",
         ],
+        "price_gbp": 1.80,
+        "nutrition_per_serving": {"protein_g": 52, "carbs_g": 360, "calories_kcal": 2100},
+        "key_vitamins": ["B1", "B3", "selenium"],
+        "dietary_tags": ["vegan", "contains_gluten"],
+    },
+    "jollof rice": {
+        "name": "Jollof Rice",
+        "cuisine": "West African",
+        "difficulty": "intermediate",
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 40,
+        "servings": 4,
+        "ingredients": [
+            {"item": "long grain rice", "quantity": "300g", "prep": "rinsed"},
+            {"item": "tomatoes", "quantity": "4 medium", "prep": "blended"},
+            {"item": "red bell pepper", "quantity": "1", "prep": "blended"},
+            {"item": "onion", "quantity": "1 large", "prep": "sliced"},
+            {"item": "garlic", "quantity": "3 cloves", "prep": "minced"},
+            {"item": "ginger", "quantity": "1 tbsp", "prep": "grated"},
+            {"item": "tomato paste", "quantity": "2 tbsp", "prep": "none"},
+            {"item": "vegetable oil", "quantity": "3 tbsp", "prep": "none"},
+            {"item": "vegetable stock", "quantity": "600ml", "prep": "hot"},
+            {"item": "bay leaf", "quantity": "2", "prep": "none"},
+            {"item": "thyme", "quantity": "1 tsp", "prep": "dried"},
+            {"item": "curry powder", "quantity": "1 tsp", "prep": "optional"},
+        ],
+        "techniques": [
+            {
+                "name": "sauce reduction",
+                "description": "Cook tomato base until thickened and the raw taste is removed",
+                "precision": "high",
+                "temperature_c": 120,
+                "duration_minutes": 15,
+            },
+            {
+                "name": "rice absorption cooking",
+                "description": "Simmer rice in seasoned tomato stock until tender and fluffy",
+                "precision": "high",
+                "temperature_c": 95,
+                "duration_minutes": 25,
+            },
+            {
+                "name": "steam finishing",
+                "description": "Cover and steam rice to finish cooking evenly without burning",
+                "precision": "medium",
+                "temperature_c": 90,
+                "duration_minutes": 10,
+            },
+        ],
+        "equipment": ["heavy pot", "wooden spoon", "blender", "lid", "measuring jug"],
+        "temperatures": {"sauce": 120, "simmer": 95, "finish": 90, "serving": 75},
+        "steps": [
+            "Rinse the rice until the water runs clearer and set aside.",
+            "Blend tomatoes, bell pepper, and half the onion into a smooth base.",
+            "Heat oil in a heavy pot and saute the remaining onion until soft.",
+            "Add garlic, ginger, tomato paste, thyme, and bay leaves; cook briefly.",
+            "Pour in the blended tomato base and cook down until thick and fragrant.",
+            "Add hot stock, season, and bring to a simmer.",
+            "Stir in the rice, cover, and cook on low heat until the liquid is absorbed.",
+            "Reduce heat further if needed and steam-finish until the grains are tender.",
+            "Fluff gently with a fork and rest before serving.",
+        ],
+        "safety": [
+            "Stir gently to avoid breaking the rice grains.",
+            "Monitor the bottom of the pot to prevent burning during the final stage.",
+            "Ensure stock stays hot when added so the rice cooks evenly.",
+        ],
+        "price_gbp": 6.40,
+        "nutrition_per_serving": {"protein_g": 7, "carbs_g": 58, "calories_kcal": 390},
+        "key_vitamins": ["C", "A", "folate"],
+        "dietary_tags": ["vegan", "gluten_free"],
+    },
+    "vegan lentil curry": {
+        "name": "Vegan Lentil Curry",
+        "cuisine": "International",
+        "difficulty": "beginner",
+        "prep_time_minutes": 10,
+        "cook_time_minutes": 25,
+        "servings": 2,
+        "ingredients": [
+            {"item": "red lentils", "quantity": "180g", "prep": "rinsed"},
+            {"item": "coconut milk", "quantity": "200ml", "prep": "none"},
+            {"item": "chopped tomatoes", "quantity": "400g", "prep": "none"},
+            {"item": "onion", "quantity": "1", "prep": "diced"},
+            {"item": "garlic", "quantity": "2 cloves", "prep": "minced"},
+            {"item": "curry powder", "quantity": "1 tbsp", "prep": "none"},
+            {"item": "rice", "quantity": "140g", "prep": "rinsed"},
+        ],
+        "techniques": [
+            {"name": "simmering", "description": "Simmer lentils until soft", "precision": "medium", "temperature_c": 95, "duration_minutes": 20},
+            {"name": "tempering spices", "description": "Bloom spices in oil", "precision": "medium", "temperature_c": 140, "duration_minutes": 2},
+        ],
+        "equipment": ["pot", "saucepan", "wooden spoon"],
+        "temperatures": {"simmer": 95, "serving": 75},
+        "steps": [
+            "Saute onion and garlic with curry powder.",
+            "Add lentils, tomatoes, and coconut milk.",
+            "Simmer until lentils are tender.",
+            "Cook rice separately and serve together.",
+        ],
+        "safety": [
+            "Stir regularly to prevent sticking.",
+            "Ensure lentils are fully cooked before serving.",
+        ],
+        "price_gbp": 5.20,
+        "nutrition_per_serving": {"protein_g": 21, "carbs_g": 62, "calories_kcal": 520},
+        "key_vitamins": ["iron", "folate", "B6"],
+        "dietary_tags": ["vegan", "gluten_free"],
+    },
+    "tofu stir-fry": {
+        "name": "Tofu Stir-Fry",
+        "cuisine": "Asian-inspired",
+        "difficulty": "beginner",
+        "prep_time_minutes": 15,
+        "cook_time_minutes": 12,
+        "servings": 2,
+        "ingredients": [
+            {"item": "firm tofu", "quantity": "300g", "prep": "pressed and cubed"},
+            {"item": "broccoli", "quantity": "180g", "prep": "florets"},
+            {"item": "bell pepper", "quantity": "1", "prep": "sliced"},
+            {"item": "soy sauce", "quantity": "2 tbsp", "prep": "none"},
+            {"item": "ginger", "quantity": "1 tsp", "prep": "grated"},
+            {"item": "rice", "quantity": "140g", "prep": "rinsed"},
+        ],
+        "techniques": [
+            {"name": "stir-frying", "description": "Cook quickly on high heat", "precision": "high", "temperature_c": 220, "duration_minutes": 8},
+            {"name": "pan-searing", "description": "Brown tofu edges for texture", "precision": "medium", "temperature_c": 190, "duration_minutes": 5},
+        ],
+        "equipment": ["wok", "pan", "spatula"],
+        "temperatures": {"stir_fry": 220, "serving": 78},
+        "steps": [
+            "Sear tofu until lightly golden.",
+            "Stir-fry vegetables over high heat.",
+            "Add soy and ginger, toss with tofu.",
+            "Serve with cooked rice.",
+        ],
+        "safety": ["Use high-heat caution to avoid oil splatter."],
+        "price_gbp": 6.40,
+        "nutrition_per_serving": {"protein_g": 24, "carbs_g": 39, "calories_kcal": 470},
+        "key_vitamins": ["calcium", "C", "K"],
+        "dietary_tags": ["vegan"],
+    },
+    "chickpea pasta": {
+        "name": "Chickpea Pasta",
+        "cuisine": "Mediterranean-inspired",
+        "difficulty": "beginner",
+        "prep_time_minutes": 10,
+        "cook_time_minutes": 18,
+        "servings": 2,
+        "ingredients": [
+            {"item": "pasta", "quantity": "180g", "prep": "none"},
+            {"item": "chickpeas", "quantity": "240g", "prep": "drained"},
+            {"item": "tomato passata", "quantity": "250ml", "prep": "none"},
+            {"item": "spinach", "quantity": "80g", "prep": "washed"},
+            {"item": "olive oil", "quantity": "1 tbsp", "prep": "none"},
+            {"item": "garlic", "quantity": "2 cloves", "prep": "minced"},
+        ],
+        "techniques": [
+            {"name": "boiling", "description": "Cook pasta to al dente", "precision": "medium", "temperature_c": 100, "duration_minutes": 10},
+            {"name": "simmering", "description": "Reduce sauce to coat pasta", "precision": "medium", "temperature_c": 95, "duration_minutes": 8},
+        ],
+        "equipment": ["pot", "pan", "colander"],
+        "temperatures": {"boil": 100, "simmer": 95, "serving": 76},
+        "steps": [
+            "Cook pasta until al dente.",
+            "Saute garlic in olive oil.",
+            "Add chickpeas and passata, simmer.",
+            "Stir in spinach, then toss with pasta.",
+        ],
+        "safety": ["Handle boiling water carefully when draining pasta."],
+        "price_gbp": 5.90,
+        "nutrition_per_serving": {"protein_g": 19, "carbs_g": 74, "calories_kcal": 610},
+        "key_vitamins": ["iron", "folate", "B1"],
+        "dietary_tags": ["vegan"],
     },
 }
 
@@ -826,6 +1036,230 @@ def analyse_dish(dish_name: str) -> str:
         )
 
     return json.dumps(dish, indent=2)
+
+
+def _resolve_dish(dish_name: str):
+    """Resolve dish name using exact then partial matching."""
+    key = dish_name.lower().strip()
+    dish = DISHES.get(key)
+    dish_key = key if dish else None
+    if dish is None:
+        for db_key, db_dish in DISHES.items():
+            if key in db_key or db_key in key:
+                dish = db_dish
+                dish_key = db_key
+                break
+    return dish_key, dish
+
+
+def _scale_by_servings(value: float, base_servings: int, servings: int) -> float:
+    if base_servings <= 0:
+        return value
+    return value * (servings / base_servings)
+
+
+def _macro_fit_score(protein_g: float, carbs_g: float, macro_focus: str) -> float:
+    if macro_focus == "protein":
+        return min(100.0, (protein_g / 25.0) * 100.0)
+    if macro_focus == "carbohydrate":
+        return min(100.0, (carbs_g / 70.0) * 100.0)
+    protein_score = min(100.0, (protein_g / 22.0) * 100.0)
+    carb_score = min(100.0, (carbs_g / 65.0) * 100.0)
+    return (protein_score + carb_score) / 2.0
+
+
+def _is_diet_compatible(tags: list[str], dietary_filter: str) -> bool:
+    if dietary_filter in ("", "any", "none"):
+        return True
+    if dietary_filter == "vegan":
+        return "vegan" in tags
+    if dietary_filter == "gluten_free":
+        return "gluten_free" in tags
+    return dietary_filter in tags
+
+
+@mcp.tool()
+def get_nutrition(dish_name: str, servings: int = 2) -> str:
+    """
+    Get nutrition data for a dish scaled to the requested number of servings.
+
+    Args:
+        dish_name: Name of the dish (e.g. 'vegan lentil curry').
+        servings: Number of servings required (default: 2).
+    """
+    _, dish = _resolve_dish(dish_name)
+    if dish is None or "nutrition_per_serving" not in dish:
+        available = ", ".join(
+            sorted(k for k, d in DISHES.items() if "nutrition_per_serving" in d)
+        )
+        return json.dumps(
+            {
+                "error": f"Nutrition data not found for '{dish_name}'.",
+                "available_dishes": available,
+            },
+            indent=2,
+        )
+
+    base_servings = dish.get("servings", 1)
+    per_serving = dish["nutrition_per_serving"]
+    totals = {
+        "protein_g": round(_scale_by_servings(per_serving["protein_g"], 1, servings), 1),
+        "carbs_g": round(_scale_by_servings(per_serving["carbs_g"], 1, servings), 1),
+        "calories_kcal": round(_scale_by_servings(per_serving["calories_kcal"], 1, servings), 1),
+    }
+
+    result = {
+        "dish": dish["name"],
+        "requested_servings": servings,
+        "base_servings": base_servings,
+        "nutrition_per_serving": per_serving,
+        "nutrition_total_for_requested_servings": totals,
+        "key_vitamins": dish.get("key_vitamins", []),
+        "dietary_tags": dish.get("dietary_tags", []),
+    }
+    return json.dumps(result, indent=2)
+
+
+@mcp.tool()
+def get_price(dish_name: str, servings: int = 2) -> str:
+    """
+    Get estimated dish price in GBP scaled to requested servings.
+
+    Args:
+        dish_name: Name of the dish (e.g. 'tofu stir-fry').
+        servings: Number of servings required (default: 2).
+    """
+    _, dish = _resolve_dish(dish_name)
+    if dish is None or "price_gbp" not in dish:
+        available = ", ".join(
+            sorted(k for k, d in DISHES.items() if "price_gbp" in d)
+        )
+        return json.dumps(
+            {
+                "error": f"Price data not found for '{dish_name}'.",
+                "available_dishes": available,
+            },
+            indent=2,
+        )
+
+    base_servings = dish.get("servings", 1)
+    total_cost = _scale_by_servings(dish["price_gbp"], base_servings, servings)
+    per_person = total_cost / max(1, servings)
+
+    result = {
+        "dish": dish["name"],
+        "requested_servings": servings,
+        "base_servings": base_servings,
+        "estimated_total_price_gbp": round(total_cost, 2),
+        "estimated_price_per_person_gbp": round(per_person, 2),
+    }
+    return json.dumps(result, indent=2)
+
+
+@mcp.tool()
+def fit_budget(
+    budget_gbp: float,
+    servings: int = 2,
+    dietary_filter: str = "vegan",
+    macro_focus: str = "protein",
+    top_k: int = 3,
+) -> str:
+    """
+    Find dishes that fit a budget while balancing nutrition and feasibility.
+
+    Args:
+        budget_gbp: Total budget cap in GBP.
+        servings: Number of servings required.
+        dietary_filter: 'vegan', 'gluten_free', or 'any'.
+        macro_focus: 'protein', 'carbohydrate', or 'balanced'.
+        top_k: Number of top options to return.
+    """
+    dietary_filter = dietary_filter.lower().strip()
+    macro_focus = macro_focus.lower().strip()
+    if macro_focus == "carb":
+        macro_focus = "carbohydrate"
+
+    candidates = []
+    excluded = []
+
+    for dish_key, dish in DISHES.items():
+        if "price_gbp" not in dish or "nutrition_per_serving" not in dish:
+            continue
+
+        tags = dish.get("dietary_tags", [])
+        if not _is_diet_compatible(tags, dietary_filter):
+            excluded.append(
+                {
+                    "dish": dish["name"],
+                    "reason": f"Not compatible with dietary filter '{dietary_filter}'",
+                }
+            )
+            continue
+
+        total_cost = _scale_by_servings(dish["price_gbp"], dish.get("servings", 1), servings)
+        if total_cost > budget_gbp:
+            excluded.append(
+                {
+                    "dish": dish["name"],
+                    "reason": f"Over budget ({round(total_cost, 2)} GBP > {budget_gbp} GBP)",
+                }
+            )
+            continue
+
+        per_serving = dish["nutrition_per_serving"]
+        nutrition_score = _macro_fit_score(
+            per_serving["protein_g"],
+            per_serving["carbs_g"],
+            macro_focus,
+        )
+        budget_score = 100.0 if budget_gbp <= 0 else max(0.0, 100.0 * (1 - (total_cost / budget_gbp)))
+
+        difficulty = dish.get("difficulty", "intermediate")
+        difficulty_penalty = {"beginner": 0, "intermediate": 7, "advanced": 15}.get(difficulty, 7)
+        cook_time = dish.get("prep_time_minutes", 0) + dish.get("cook_time_minutes", 0)
+        time_penalty = min(30, max(0, cook_time - 20) * 0.4)
+        feasibility_score = max(0.0, 100.0 - difficulty_penalty - time_penalty)
+
+        total_score = round(0.45 * nutrition_score + 0.35 * budget_score + 0.20 * feasibility_score, 2)
+        candidates.append(
+            {
+                "dish": dish["name"],
+                "dish_key": dish_key,
+                "estimated_total_price_gbp": round(total_cost, 2),
+                "estimated_price_per_person_gbp": round(total_cost / max(1, servings), 2),
+                "nutrition_per_serving": per_serving,
+                "key_vitamins": dish.get("key_vitamins", []),
+                "dietary_tags": tags,
+                "difficulty": difficulty,
+                "total_time_minutes": cook_time,
+                "score_breakdown": {
+                    "nutrition_score": round(nutrition_score, 2),
+                    "budget_score": round(budget_score, 2),
+                    "feasibility_score": round(feasibility_score, 2),
+                    "total_score": total_score,
+                },
+            }
+        )
+
+    candidates.sort(key=lambda x: x["score_breakdown"]["total_score"], reverse=True)
+    top_k = max(1, min(top_k, len(candidates) if candidates else 1))
+
+    result = {
+        "constraints": {
+            "budget_gbp": budget_gbp,
+            "servings": servings,
+            "dietary_filter": dietary_filter,
+            "macro_focus": macro_focus,
+        },
+        "matching_count": len(candidates),
+        "top_options": candidates[:top_k],
+        "excluded": excluded,
+        "notes": [
+            "Costs are estimated workshop values and should be validated against local prices.",
+            "Nutrition values are approximate per serving estimates.",
+        ],
+    }
+    return json.dumps(result, indent=2)
 
 
 @mcp.tool()
@@ -1010,6 +1444,204 @@ def get_equipment_specs(equipment_name: str) -> str:
         )
 
     return json.dumps(equipment, indent=2)
+
+
+@mcp.tool()
+def generate_shopping_list(
+    dish_name: str,
+    servings: int = 2,
+    include_pantry_staples: bool = False,
+) -> str:
+    """
+    Generate a detailed shopping list for a dish with quantities scaled to servings.
+    
+    Groups ingredients by category (produce, proteins, dairy, pantry, etc.) for
+    easier shopping. Can optionally include common pantry staples.
+
+    Args:
+        dish_name: Name of the dish (e.g. 'pasta carbonara').
+        servings: Number of servings to prepare (default: 2).
+        include_pantry_staples: Whether to include salt, oil, water, etc. (default: False).
+    
+    Returns:
+        JSON string containing:
+        - dish name and servings
+        - categorized ingredients with scaled quantities
+        - estimated total cost
+        - dietary information
+        - special notes about ingredient sourcing/quality
+    """
+    _, dish = _resolve_dish(dish_name)
+    if dish is None:
+        available = ", ".join(sorted(DISHES.keys()))
+        return json.dumps(
+            {
+                "error": f"Dish '{dish_name}' not found.",
+                "available_dishes": available,
+            },
+            indent=2,
+        )
+
+    base_servings = dish.get("servings", 4)
+    ingredients = dish.get("ingredients", [])
+    
+    # Categorize and scale ingredients
+    categorized = {}
+    for ingredient in ingredients:
+        item = ingredient.get("item", "")
+        quantity = ingredient.get("quantity", "as needed")
+        prep = ingredient.get("prep", "")
+        
+        # Determine category (simplified)
+        category = "Pantry"
+        if any(x in item.lower() for x in ["cheese", "milk", "butter", "egg", "yogurt"]):
+            category = "Dairy"
+        elif any(x in item.lower() for x in ["meat", "fish", "chicken", "beef", "pork", "seafood"]):
+            category = "Proteins"
+        elif any(x in item.lower() for x in ["lettuce", "tomato", "pepper", "onion", "garlic", "cucumber", "spinach", "broccoli", "carrot"]):
+            category = "Produce"
+        elif any(x in item.lower() for x in ["flour", "rice", "pasta", "bread", "grain"]):
+            category = "Grains"
+        elif any(x in item.lower() for x in ["sauce", "oil", "vinegar", "spice", "seasoning"]):
+            category = "Condiments & Spices"
+        
+        if category not in categorized:
+            categorized[category] = []
+        
+        categorized[category].append({
+            "item": item,
+            "quantity": quantity,
+            "prep_notes": prep if prep and prep != "none" else "",
+        })
+    
+    # Optionally add pantry staples
+    pantry_note = ""
+    if include_pantry_staples:
+        if "Pantry" not in categorized:
+            categorized["Pantry"] = []
+        pantry_staples = [
+            {"item": "salt", "quantity": "as needed", "prep_notes": "fine sea salt"},
+            {"item": "black pepper", "quantity": "as needed", "prep_notes": "freshly ground"},
+            {"item": "olive oil", "quantity": "as needed", "prep_notes": "good quality"},
+            {"item": "water", "quantity": "as needed", "prep_notes": "filtered"},
+        ]
+        for staple in pantry_staples:
+            if not any(s["item"].lower() == staple["item"].lower() for s in categorized["Pantry"]):
+                categorized["Pantry"].append(staple)
+        pantry_note = "Pantry staples (salt, pepper, oil, water) are included."
+    
+    # Estimate total cost
+    estimated_cost = _scale_by_servings(
+        dish.get("price_gbp", 0),
+        base_servings,
+        servings
+    )
+    
+    result = {
+        "dish": dish["name"],
+        "servings": servings,
+        "estimated_total_cost_gbp": round(estimated_cost, 2),
+        "estimated_cost_per_person_gbp": round(estimated_cost / max(1, servings), 2),
+        "shopping_list": categorized,
+        "dietary_tags": dish.get("dietary_tags", []),
+        "key_vitamins": dish.get("key_vitamins", []),
+        "notes": [
+            f"Quantities are scaled for {servings} servings.",
+            "For best results, buy fresh ingredients on the cooking day.",
+            pantry_note if pantry_note else "Pantry staples not included.",
+        ],
+    }
+    
+    return json.dumps(result, indent=2)
+
+
+@mcp.tool()
+def check_allergens(dish_name: str) -> str:
+    """
+    Check a dish for common allergens and provide allergen information.
+    
+    Returns comprehensive allergen data including:
+    - Major allergens present (peanuts, tree nuts, milk, eggs, etc.)
+    - Dietary compatibility (vegan, vegetarian, gluten-free, etc.)
+    - Cross-contamination notes
+    - Safe alternatives if allergen present
+
+    Args:
+        dish_name: Name of the dish to check (e.g. 'pad thai', 'cheese souffle').
+    
+    Returns:
+        JSON string containing:
+        - dish name
+        - list of allergens present
+        - dietary tags and compatibility
+        - safety notes and precautions
+    """
+    _, dish = _resolve_dish(dish_name)
+    if dish is None:
+        available = ", ".join(sorted(DISHES.keys()))
+        return json.dumps(
+            {
+                "error": f"Dish '{dish_name}' not found.",
+                "available_dishes": available,
+            },
+            indent=2,
+        )
+    
+    # Common allergen keywords
+    allergen_map = {
+        "peanuts": ["peanut"],
+        "tree_nuts": ["almond", "cashew", "walnut", "pecan", "hazelnut", "macadamia", "pistachio"],
+        "milk": ["cheese", "milk", "cream", "butter", "yogurt", "dairy"],
+        "eggs": ["egg", "mayonnaise"],
+        "fish": ["fish", "salmon", "tuna", "cod", "anchovy"],
+        "shellfish": ["shrimp", "prawn", "crab", "lobster", "mussel", "oyster", "clam"],
+        "soy": ["soy", "tofu"],
+        "wheat": ["wheat", "flour", "bread", "pasta", "barley"],
+        "gluten": ["wheat", "barley", "rye"],
+        "sesame": ["sesame"],
+        "mustard": ["mustard"],
+    }
+    
+    # Check ingredients for allergens
+    detected_allergens = set()
+    ingredients_str = json.dumps(dish.get("ingredients", [])).lower()
+    
+    for allergen, keywords in allergen_map.items():
+        for keyword in keywords:
+            if keyword in ingredients_str:
+                detected_allergens.add(allergen)
+                break
+    
+    # Also check dietary tags
+    dietary_tags = dish.get("dietary_tags", [])
+    
+    result = {
+        "dish": dish["name"],
+        "detected_allergens": sorted(list(detected_allergens)),
+        "dietary_tags": dietary_tags,
+        "allergen_details": {
+            "contains_milk": "contains_dairy" in dietary_tags or "milk" in detected_allergens,
+            "contains_eggs": "contains_egg" in dietary_tags or "eggs" in detected_allergens,
+            "contains_peanuts": "peanuts" in detected_allergens,
+            "contains_tree_nuts": "tree_nuts" in detected_allergens,
+            "contains_fish": "contains_fish" in dietary_tags or "fish" in detected_allergens,
+            "contains_shellfish": "shellfish" in detected_allergens,
+            "contains_soy": "soy" in detected_allergens or "tofu" in ingredients_str,
+            "contains_gluten": "gluten" in detected_allergens or "wheat" in detected_allergens,
+            "contains_sesame": "sesame" in detected_allergens,
+            "is_vegan": "vegan" in dietary_tags,
+            "is_vegetarian": "vegetarian" in dietary_tags or "vegan" in dietary_tags,
+            "is_gluten_free": "gluten_free" in dietary_tags,
+        },
+        "safety_recommendations": [
+            "Always inform guests of allergen content before serving.",
+            "Use clean utensils and cutting boards to avoid cross-contamination.",
+            "Read all ingredient labels to verify allergen status.",
+            "Store allergen-containing items separately if serving multiple guests.",
+        ],
+    }
+    
+    return json.dumps(result, indent=2)
 
 
 @mcp.tool()

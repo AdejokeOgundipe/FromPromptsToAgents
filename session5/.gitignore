@@ -1,0 +1,20 @@
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment variables
+.env
+
+# Streamlit and local tooling
+.streamlit/
+
+# Editor/OS files
+.DS_Store
+.vscode/
+
+# Local documentation artifact
+ENHANCEMENTS.md
